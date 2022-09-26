@@ -28,7 +28,7 @@ jobs:
       uses: chmod +x gradflew
       
     -name : build with gradle
-      run : ./gradlew build
+     run : ./gradlew build
 
   publish:
 
