@@ -8,24 +8,30 @@ pipeline {
     }
 
     stages {
+        stage('checkout') {
+            steps {
+                checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: 'cypress', url: 'https://github.com/balaji250/docker.git']]])            
+                
+            }
+        }
         stage('Dependencies') {
             steps {
-                sh 'npm i'
+                bat 'npm install'
             }
         }
         stage('Build') {
             steps {
-                sh 'npm run build'
+                bat 'npm build'
             }
         }
-        stage('Unit Tests') {
+        stage('Tests') {
             steps {
-                sh 'npm run test'
+                bat 'npm run'
             }
         }
         stage('e2e Tests') {
             steps {
-                sh 'npm run cypress:ci'
+                bat 'npm ci'
             }
         }
         stage('Deploy') {
