@@ -1,0 +1,11 @@
+{
+    "Email": "admin@yoroflow.com",
+    "Password": "Test@123$",
+    "TaskboardName":"Sample Taskboard",
+    "WorkflowName":"TestUserWorkflow",
+    "TaskTitleName":"SampleTask",
+    "EnterName":"TestingTeam",
+    "ProjectName":"SampleProject",
+    "ProjectTitleName":"ProjectTask",
+    "InvalidProjectName":"SampProject"
+}

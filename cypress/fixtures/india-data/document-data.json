@@ -1,0 +1,11 @@
+{
+    "Email": "admin@yoroflow.com",
+    "Password": "Test@123$",
+    "DocumentName": "Customer Requirement",
+    "DocumentParagraph": "Customer requirements refer to the specifications or features of a product or service that are deemed necessary by customers.",
+    "Owner": "automation",
+    "SearchDocument": "Customer Requirement",
+    "SearchTeam": "Automation",
+    "EditDocumentName":"Edit Customer Requirement",
+    "EditParagraph":"Edit Customer requirements refer to the specifications or features of a product or service that are deemed necessary by customers."
+}

@@ -1,0 +1,13 @@
+{
+    "Email": "admin@yoroflow.com",
+    "Password": "Test@123$",
+    "DeskName":"Karthi smtp",
+    "SearchName": "Karthi",
+    "Subject":"Hello",
+    "Description":"This test mail",
+    "Reply":"Test Mail",
+    "Name":"Admin",
+    "SLA":"Karthi SLA",
+    "LabelName":"Defect",
+    "Rename":"2"
+}

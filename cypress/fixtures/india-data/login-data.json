@@ -1,0 +1,6 @@
+{
+    "Email": "admin@yoroflow.com",
+    "Password": "Test@123$",
+    "InvalidEmail": "admin1yoroflow.com",
+    "InvalidPassword": "Test@123"
+}

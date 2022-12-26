@@ -1,0 +1,33 @@
+{
+
+    "Email": "admin@yoroflow.com",
+<<<<<<< HEAD
+    "Password": "Test@123$",
+    "DataTableName": "Yoroflow Employee Detail",
+    "DataTableDetails": "This Data Contains the Details of Employee Details",
+    "ColumnName": "Name",
+    "Size": "20",
+    "DateColumnName": "Date",
+    "Name": "Test data",
+    "Nmae1": "Test Data 1",
+    "GroupName": "Ad22",
+    "AnotherTeam": "King2",
+    "SearchName": "yoroflow",
+    "FieldSize": "20",
+    "OwnerName": "KARTHI"
+=======
+   "Password": "Test@123$",
+   "DataTableDetails":"This Data Contains the Details of Employee Details",
+   "ColumnName":"Name",
+   "Size":"20",
+   "DateColumnName":"Date",
+   "Name":"Test data",
+   "Nmae1":"Test Data 1",
+   "GroupName":"Ad22",
+   "AnotherTeam":"King2",
+   "SearchName":"yoroflow",
+   "FieldSize":"20",
+   "OwnerName":"KARTHI"
+>>>>>>> origin/second-branch
+
+}

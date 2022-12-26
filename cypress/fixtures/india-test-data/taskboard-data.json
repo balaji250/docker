@@ -1,0 +1,15 @@
+{
+    "Email": "admin@yoroflow.com",
+    "Password": "Test@123$",
+    "InvalidEmail": "admin1yoroflow.com",
+    "InvalidPassword": "Test@123",
+    "TaskboardName": "Event Planing",
+    "TaskTitle": "Task 1",
+    "ScracthTaskboardName": "1Yoroflow Bug Tracking",
+    "TaskboardDescription": "Bug Tracking Taskboard",
+    "EditStatus": "In Progress",
+    "StatusName": "In Development",
+    "TaskId": "100",
+    "TaskDescription": "Taskboard Issues",
+    "SearchTaskboardName": "1Yoroflow"
+}
