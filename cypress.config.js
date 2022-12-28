@@ -43,7 +43,7 @@ module.exports = defineConfig({
   // },
   e2e: {
     watchForFileChanges: false,
-    defaultCommandTimeout: 8000,
+    defaultCommandTimeout: 10000,
     commandDelay: 900,
 
   },
