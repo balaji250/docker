@@ -47,16 +47,7 @@ module.exports = defineConfig({
     commandDelay: 900,
 
   },
- "reporter": "cypress-mochawesome-reporter",
-  "reporterOptions": {
-    "reportDir": "cypress/reports",
-    "charts": true,
-    "reportPageTitle": "My Test Suite",
-    "embeddedScreenshots": true,
-    "inlineAssets": true
-  },
-  "video": false
-
+ 
   
   
 
