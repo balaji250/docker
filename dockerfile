@@ -5,5 +5,4 @@ COPY cypress.json ./
 COPY package.json ./
 COPY cypress ./cypress
 # Install npm dependencies, can also use "npm ci"
-RUN npm install
-RUN npm verify:cy
+RUN npm ci
