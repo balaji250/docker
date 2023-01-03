@@ -1,4 +1,4 @@
-FROM cypress/base:16.18.1
+FROM cypress/base:18.12.0
 RUN mkdir /my-cypress-project
 WORKDIR /my-cypress-project
 COPY ./package.json .
