@@ -1,4 +1,4 @@
-FROM cypress/browsers:node14.17.0-chrome88-ff89
+FROM cypress/base:16.18.1
 RUN mkdir /my-cypress-project
 WORKDIR /my-cypress-project
 COPY ./package.json .
