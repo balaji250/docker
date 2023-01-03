@@ -1,4 +1,4 @@
-FROM cypress/included:12.2.0
+FROM cypress/browsers:latest
 RUN  mkdir /app
 WORKDIR /app
 COPY . /app
