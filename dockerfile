@@ -5,4 +5,4 @@ COPY ./package.json .
 COPY ./cypress.json .
 COPY ./cypress ./cypress
 RUN npm install
-ENTRYPOINT ["npx","cypress","run"]
+RUN npx cypress run
