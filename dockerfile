@@ -3,4 +3,4 @@ RUN  mkdir /app
 WORKDIR /app
 COPY . /app
 RUN npm i 
-RUN npx cypress open
+RUN npx cypress run
