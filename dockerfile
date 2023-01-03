@@ -1,10 +1,8 @@
-FROM cypress/included:12.2.0
-# make directory inside container
-RUN mkdir /app
+FROM cypress/base:10
 WORKDIR /app
-# copy cypress code from host to container
-COPY . /app
-# execute the tests
-RUN npm install -g npm@9.2.0
-ENTRYPOINT ["npx","cypress","run"]
- 
+# Copy our test page and test files
+COPY cypress.json ./
+COPY package.json ./
+COPY cypress ./cypress
+# Install npm dependencies, can also use "npm ci"
+RUN npm install
