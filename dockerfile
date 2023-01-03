@@ -6,3 +6,4 @@ COPY package.json ./
 COPY cypress ./cypress
 # Install npm dependencies, can also use "npm ci"
 RUN npm install
+RUN npx cypress run
