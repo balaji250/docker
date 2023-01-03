@@ -5,5 +5,5 @@ COPY ./package.json .
 COPY ./cypress.json .
 COPY ./cypress ./cypress
 RUN npm install
-RUN npm run cy:run
+RUN npm run cy
 RUN npx cypress run
