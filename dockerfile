@@ -6,7 +6,7 @@ WORKDIR /app
 # copy cypress code from host to container
 COPY . /app
 # execute the tests
-RUN npm install
+RUN cypress run
 RUN $(npm bin)/cypress verify
 RUN $(npm bin)/cypress run --browser firefox
 RUN $(npm bin)/cypress run --browser chrome
