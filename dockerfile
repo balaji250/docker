@@ -65,17 +65,3 @@ RUN echo "whoami: $(whoami)" \
     "firefox:         $(firefox --version || true) \n"
 
 ENTRYPOINT ["cypress", "run"]
-Footer
-© 2023 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
