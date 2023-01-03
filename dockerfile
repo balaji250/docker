@@ -6,7 +6,7 @@ WORKDIR /app
 # copy cypress code from host to container
 COPY . /app
 # execute the tests
-RUN npm install -g "cypress@9.2.0"
-RUN npm install --save-dev mocha cypress-multi-reporters mochawesome 
+RUN npm install 
+RUN npm install 
 RUN npx cypress run
  
