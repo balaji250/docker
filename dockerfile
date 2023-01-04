@@ -1,4 +1,4 @@
-FROM cypress/browsers:latest
+FROM agoldis/sorry-cypress-dashboard:latest
 RUN  mkdir /app
 WORKDIR /app
 COPY . /app
