@@ -1,4 +1,2 @@
-dashboard:
-    image: agoldis/sorry-cypress-dashboard:latest
-    environment:
-      GRAPHQL_SCHEMA_URL: http://localhost:4000
+FROM agoldis/sorry-cypress-dashboard:latest
+EXPOSE http://localhost:4000
