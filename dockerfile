@@ -1,2 +1,2 @@
 FROM agoldis/sorry-cypress-dashboard:latest
-EXPOSE http://localhost:4000
+EXPOSE http://165.232.177.103:4000
