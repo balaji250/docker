@@ -3,4 +3,4 @@ USER root
 RUN  mkdir /app
 WORKDIR /app
 COPY . /app
-RUN npx cypress run
+RUN npm install cy2 cypress
