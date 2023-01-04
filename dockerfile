@@ -1,3 +1,7 @@
 FROM agoldis/sorry-cypress-dashboard:latest
-EXPOSE 4000
-npm install cy2
+RUN  mkdir /app
+WORKDIR /app
+COPY . /app
+RUN apt-get install -y npm
+RUN npm ci
+RUN npx cypress run
