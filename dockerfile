@@ -2,6 +2,5 @@ FROM cypress/browsers:latest
 RUN  mkdir /app
 WORKDIR /app
 COPY . /app
-RUN npm install -g cypress@9.2.0
-RUN npm install --save-dev mocha cypress-multi-reporters mochawesome
+RUN npm ci
 RUN npx cypress run
