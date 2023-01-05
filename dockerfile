@@ -1,7 +1,7 @@
 FROM cypress/browsers:latest
 USER root
 RUN apt-get upgrade -y
-RUN apt install -y chromium-browser
+RUN apt-get install chromium-browser
 RUN  mkdir /app
 WORKDIR /app
 COPY . /app
