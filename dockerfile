@@ -1,4 +1,4 @@
-FROM agoldis/sorry-cypress-dashboard
+FROM cypress/included:latest
 USER root
 RUN apt-get update
 RUN apt-get install -y libgtk2.0-0 libgbm-dev libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 xauth xvfb
