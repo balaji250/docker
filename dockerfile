@@ -1,8 +1,5 @@
-FROM cypress/browsers:latest
+agoldis/sorry-cypress-dashboard:latest
 USER root
-RUN apt-get update
-RUN apt-get upgrade -y
-RUN apt-get install chromium -y
 RUN  mkdir /app
 WORKDIR /app
 COPY . /app
