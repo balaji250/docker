@@ -1,8 +1,8 @@
 FROM agoldis/sorry-cypress-director:latest
 USER root
-RUN  mkdir /app
-WORKDIR /app
-COPY . /app
+RUN  mkdir /app1
+WORKDIR /app1
+COPY . /app1
 ENV EXECUTION_DRIVER="../execution/in-memory" \
     SCREENSHOTS_DRIVER="../screenshots/dummy.driver" \
     PORT="1234"
