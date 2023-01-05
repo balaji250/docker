@@ -5,5 +5,5 @@ WORKDIR /app
 COPY . /app
 RUN npm ci
 RUN npm install cy2
-RUN npx cypress run
+RUN npx cy2 run
 
