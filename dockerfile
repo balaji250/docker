@@ -1,4 +1,4 @@
-agoldis/sorry-cypress-dashboard:latest
+FROM agoldis/sorry-cypress-dashboard:latest
 USER root
 RUN  mkdir /app
 WORKDIR /app
