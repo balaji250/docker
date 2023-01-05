@@ -1,5 +1,5 @@
 
-FROM agoldis/sorry-cypress-director
+FROM agoldis/sorry-cypress-dashboard:latest
 USER root
 #Create the folder where our project will be stored
 RUN mkdir /my-cypress-project
