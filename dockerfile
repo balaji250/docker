@@ -1,5 +1,5 @@
 
-FROM agoldis/sorry-cypress-dashboard::node14.17.0-chrome91-ff89
+FROM agoldis/sorry-cypress-dashboard:node14.17.0-chrome91-ff89
 #Create the folder where our project will be stored
 USER root
 RUN mkdir /my-cypress-project
