@@ -1,5 +1,6 @@
 
 FROM agoldis/sorry-cypress-director
+USER root
 #Create the folder where our project will be stored
 RUN mkdir /my-cypress-project
 #We make it our workdirectory
