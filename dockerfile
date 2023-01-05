@@ -1,6 +1,6 @@
 FROM agoldis/sorry-cypress-api:latest
 USER root
-RUN yum install -y xorg-x11-server-Xvfb gtk2-devel gtk3-devel libnotify-devel GConf2 nss libXScrnSaver alsa-lib
+RUN install xvfb
 RUN  mkdir /app1
 WORKDIR /app1
 COPY . /app1
