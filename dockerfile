@@ -2,6 +2,7 @@
 FROM agoldis/sorry-cypress-director
 #Create the folder where our project will be stored
 USER root
+RUN apt-get update
 RUN mkdir /my-cypress-project
 #We make it our workdirectory
 WORKDIR /my-cypress-project
