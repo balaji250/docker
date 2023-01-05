@@ -11,13 +11,9 @@ COPY ./cypress.config.js .
 COPY ./cypress ./cypress
 #Install the cypress dependencies in the work directory
 RUN npm install
-ENV DISPLAY :99
-
-ADD run.sh /run.sh
-RUN chmod a+x /run.sh
-
-CMD /run.sh
 #Executable commands the container will use[Exec Form]
 ENTRYPOINT ["npx","cypress","run"]
 #With CMD in this case, we can specify more parameters to the last 
+
+CMD [""]    
 
