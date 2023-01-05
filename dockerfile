@@ -1,6 +1,6 @@
 FROM agoldis/sorry-cypress-api:latest
 USER root
-RUN sudo apt-get install xvfb
+RUN xvfb run
 RUN  mkdir /app1
 WORKDIR /app1
 COPY . /app1
