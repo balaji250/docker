@@ -10,7 +10,6 @@ COPY ./package.json .
 COPY ./cypress.config.js .
 COPY ./cypress ./cypress
 #Install the cypress dependencies in the work directory
-RUN /bin/sh -c apt-get update &&   apt-get install -y xvfb
 RUN npm install
 #Executable commands the container will use[Exec Form]
 ENTRYPOINT ["npx","cypress","run"]
