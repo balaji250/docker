@@ -11,9 +11,6 @@ COPY ./cypress.config.js .
 COPY ./cypress ./cypress
 #Install the cypress dependencies in the work directory
 RUN npm install cypress --save-dev
-RUN  Xvfb :99 \
-    export DISPLAY=:99 \
-    ruby headless.rb
 #Executable commands the container will use[Exec Form]
 ENTRYPOINT ["npx","cypress","run"]
 #With CMD in this case, we can specify more parameters to the last 
