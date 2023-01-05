@@ -1,6 +1,6 @@
 FROM cypress/browsers:latest
 USER root
-RUN sudo snap install chromium
+RUN apt-get install chromium
 RUN  mkdir /app
 WORKDIR /app
 COPY . /app
