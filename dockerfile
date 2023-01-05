@@ -1,4 +1,5 @@
 FROM agoldis/sorry-cypress-director:latest
+USER root
 RUN  mkdir /app
 WORKDIR /app
 COPY . /app
