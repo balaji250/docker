@@ -13,6 +13,4 @@ RUN npm ci
 RUN npm init -y 
 RUN npm install cypress 
 RUN npx cypress -v 
-RUN npx cypress open 
-RUN npx cypress open
 RUN npx cypress run
