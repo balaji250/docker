@@ -12,7 +12,7 @@ COPY ./package.json .
 COPY ./cypress.config.js .
 COPY ./cypress ./cypress
 RUN apt-get update
-RUN apt-get install -y xvfb
+RUN apt-get install -y libgtk2.0-0 libgbm-dev libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 xauth xvfb
 
 FROM agoldis/sorry-cypress-director:latest
 LABEL build_id=$BUILD_ID
