@@ -9,7 +9,7 @@ USER root
 RUN mkdir /my-cypress-project
 #We make it our workdirectory
 WORKDIR /my-cypress-project
-RUN yum install -y sudo
+RUN sudo yum update
 RUN apt-get install -y libgtk2.0-0 libgbm-dev libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 xauth xvfb
 
 #Let's copy the essential files that we MUST use to run our scripts.
