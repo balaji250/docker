@@ -6,6 +6,7 @@ FROM cypress/browsers:node14.17.0-chrome91-ff89 as build
 ARG BUILD_ID
 RUN echo $BUILD_ID
 LABEL build_id=$BUILD_ID
+LABEL stage=builder
 RUN mkdir /repo
 WORKDIR /repo
 COPY ./package.json .
@@ -15,7 +16,8 @@ RUN apt-get update
 RUN apt-get install -y libgtk2.0-0 libgbm-dev libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 xauth xvfb
 
 FROM agoldis/sorry-cypress-director:latest
-LABEL build_id=$BUILD_ID
+LABEL build=$BUILD_ID
+LABEL stage=builder
 USER root
 #Create the folder where our project will be stored
 RUN mkdir /my-cypress-project
