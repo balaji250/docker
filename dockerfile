@@ -2,7 +2,7 @@
 
 
 
-FROM cypress/browsers:node16.16.0-chrome107-ff107-edge as build
+FROM cypress/browsers:node14.17.0-chrome91-ff89 as build
 ARG BUILD_ID
 RUN echo $BUILD_ID
 LABEL build_id=$BUILD_ID
