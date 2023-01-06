@@ -2,7 +2,7 @@
 
 
 
-FROM cypress/browsers:latest as build
+FROM cypress/base:16.18.1 as build
 ARG BUILD_ID
 RUN echo $BUILD_ID
 LABEL build_id=$BUILD_ID
