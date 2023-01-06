@@ -3,7 +3,7 @@
 
 
 #Base image taken from:https://github.com/cypress-io/cypress-docker-image
-FROM cypress/browsers:node14.17.0-chrome91-ff89
+FROM agoldis/sorry-cypress-dashboard:latest
 #Create the folder where our project will be stored
 RUN mkdir /my-cypress-project
 #We make it our workdirectory
