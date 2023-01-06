@@ -2,37 +2,22 @@
 
 
 
-FROM cypress/browsers:node14.17.0-chrome91-ff89 as build
-ARG BUILD_ID
-RUN echo $BUILD_ID
-LABEL build_id=$BUILD_ID
-LABEL stage=builder
-RUN mkdir /repo
-WORKDIR /repo
-COPY ./package.json .
-COPY ./cypress.config.js .
-COPY ./cypress ./cypress
-RUN apt-get update
-RUN apt-get install -y libgtk2.0-0 libgbm-dev libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 xauth xvfb
-
-FROM agoldis/sorry-cypress-director:latest
-LABEL build=$BUILD_ID
-LABEL stage=builder
-USER root
+Base image taken from:https://github.com/cypress-io/cypress-docker-images
+FROM cypress/browsers:node14.17.0-chrome91-ff89
 #Create the folder where our project will be stored
 RUN mkdir /my-cypress-project
 #We make it our workdirectory
 WORKDIR /my-cypress-project
+RUN apt-get update
+RUN apt-get install -y libgtk2.0-0 libgbm-dev libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 xauth xvfb
+
 #Let's copy the essential files that we MUST use to run our scripts.
-COPY --from=build /repo /my-cypress-project
 COPY ./package.json .
-COPY ./cypress.config.js .
+COPY ./cypress.json .
 COPY ./cypress ./cypress
 #Install the cypress dependencies in the work directory
-RUN npm cache clean --force 
 RUN npm install
 #Executable commands the container will use[Exec Form]
 ENTRYPOINT ["npx","cypress","run"]
-#With CMD in this case, we can specify more parameters to the last 
+#With CMD in this case, we can specify more parameters to the last entrypoint.
 CMD [""]    
-
