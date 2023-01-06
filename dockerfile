@@ -2,7 +2,7 @@
 
 
 
-Base image taken from:https://github.com/cypress-io/cypress-docker-images
+#Base image taken from:https://github.com/cypress-io/cypress-docker-image
 FROM cypress/browsers:node14.17.0-chrome91-ff89
 #Create the folder where our project will be stored
 RUN mkdir /my-cypress-project
