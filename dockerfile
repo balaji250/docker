@@ -3,7 +3,7 @@
 
 
 #Base image taken from:https://github.com/cypress-io/cypress-docker-image
-FROM roemer/sorry-cypress-dashboard:semaphore
+FROM kcaiueo/sorry-pod:latest
 #Create the folder where our project will be stored
 USER root
 RUN mkdir /my-cypress-project
