@@ -29,6 +29,5 @@ RUN npm install
 #Executable commands the container will use[Exec Form]
 ENTRYPOINT ["npx","cypress","run"]
 #With CMD in this case, we can specify more parameters to the last 
-
 CMD [""]    
 
