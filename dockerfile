@@ -5,6 +5,7 @@
 #Base image taken from:https://github.com/cypress-io/cypress-docker-image
 FROM agoldis/sorry-cypress-dashboard:latest
 #Create the folder where our project will be stored
+USER root
 RUN mkdir /my-cypress-project
 #We make it our workdirectory
 WORKDIR /my-cypress-project
