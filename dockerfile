@@ -6,9 +6,9 @@
 FROM agoldis/sorry-cypress-director:latest
 #Create the folder where our project will be stored
 USER root
-RUN mkdir /my-cypress-project
+RUN mkdir /app
 #We make it our workdirectory
-WORKDIR /my-cypress-project
+WORKDIR /app
 
 #Let's copy the essential files that we MUST use to run our scripts.
 COPY ./package.json .
