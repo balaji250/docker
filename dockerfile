@@ -11,6 +11,7 @@ WORKDIR /repo
 COPY ./package.json .
 COPY ./cypress.config.js .
 COPY ./cypress ./cypress
+RUN apt-get update
 RUN apt-get install -y xvfb
 
 FROM agoldis/sorry-cypress-director:latest
