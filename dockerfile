@@ -13,7 +13,7 @@ RUN apt-get install -y libgtk2.0-0 libgbm-dev libnotify-dev libgconf-2-4 libnss3
 
 #Let's copy the essential files that we MUST use to run our scripts.
 COPY ./package.json .
-COPY ./cypress.json .
+COPY ./cypress.config.js .
 COPY ./cypress ./cypress
 #Install the cypress dependencies in the work directory
 RUN npm install
