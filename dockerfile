@@ -4,6 +4,7 @@
 
 FROM agoldis/sorry-cypress-director:latest
 #Create the folder where our project will be stored
+USER root
 RUN mkdir /app1
 #We make it our workdirectory
 WORKDIR /app1
