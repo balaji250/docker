@@ -48,7 +48,7 @@ module.exports = defineConfig({
 
   },
  {
-  "baseUrl": "http://13.234.31.186:3000",
+  "baseUrl": "http://localhost:4000",
   "projectId": "sorry-cypress",
 }
   
