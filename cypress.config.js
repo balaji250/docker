@@ -47,7 +47,11 @@ module.exports = defineConfig({
     commandDelay: 900,
 
   },
- 
+ {
+  "baseUrl": "http://localhost:3000",
+  "projectId": "sorry-cypress",
+  ...otherOptions
+}
   
   
 
