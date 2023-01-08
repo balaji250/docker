@@ -23,7 +23,7 @@
     "mochawesome": "^7.1.3",
     "mochawesome-merge": "^4.2.2"
     "cy:run-sorry":"npx cypress run --parellel --record --key xxx --ci-build-id build-002"
-  }
+  },
   
   
   }
