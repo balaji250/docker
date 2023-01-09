@@ -2,7 +2,7 @@
 
 
 
-FROM cypress/browsers:node14.7.0-chrome84
+FROM cypress/browsers:latest
 RUN  mkdir /app
 WORKDIR /app
 COPY . /app
