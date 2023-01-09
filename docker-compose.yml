@@ -26,7 +26,7 @@ cypress:
     profiles:
       - cypress
     depends_on:
-      - mongo
+      - dashboard
     environment:
     # pass base url to test pointing at the web application
       - CYPRESS_baseUrl=http://traefik:80
