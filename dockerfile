@@ -14,4 +14,4 @@ COPY cypress cypress
 COPY cypress.config.js cypress.config.js
 # confirm the cypress install
 COPY docker-compose.yml docker-compose.yml
-ENTRYPOINT [" docker-compose.yml up"]
+ENTRYPOINT [" docker-compose up"]
