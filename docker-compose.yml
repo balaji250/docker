@@ -26,7 +26,7 @@ test:
   stage: test
   
     depends_on:
-      - api
+      - dashboard
 
   api:
     image: agoldis/sorry-cypress-api:latest
