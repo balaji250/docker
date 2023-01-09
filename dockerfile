@@ -9,8 +9,7 @@ WORKDIR /usr/src/app
 
 ENV PATH /usr/src/app/node_modules/.bin:$PATH
 
-# install cypress
-RUN npm install cypress
+# install cypres
 
 # copy cypress files and folders
 COPY cypress /usr/src/app/cypress
