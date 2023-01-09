@@ -24,9 +24,6 @@ services:
 test:
   image: cypress/browsers:latest
   stage: test
-  
-    depends_on:
-      - dashboard
 
   api:
     image: agoldis/sorry-cypress-api:latest
