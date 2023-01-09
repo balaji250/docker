@@ -1,33 +1,39 @@
 version: '3.6'
 
+# Replace each <mongo-user> with the desired username
+# Replace each <mongo-pass> with the desired password
+# Replace each <minio-ip-address> with the publicly available ip address or url without http(s)
+# Replace <graphql-ip-address> with the publicly available ip address or url without http(s)
+
 services:
   mongo:
     image: mongo:4.4
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: '<mongo-user>'
+      MONGO_INITDB_ROOT_PASSWORD: '<mongo-pass>'
     volumes:
       - ./data/data-mongo-cypress:/data/db
-
+    ports:
+      - 27017:27017
   director:
     image: agoldis/sorry-cypress-director:latest
     environment:
       DASHBOARD_URL: http://localhost:8080
-      MONGODB_URI: 'mongodb://mongo:27017'
-      MONGODB_DATABASE: 'sorry-cypress'
       EXECUTION_DRIVER: '../execution/mongo/driver'
-      SCREENSHOTS_DRIVER: '../screenshots/s3.driver'
-    
+      MONGODB_URI: 'mongodb://<mongo-user>:<mongo-pass>@mongo:27017'
+      MONGODB_DATABASE: 'sorry-cypress'
+
+      SCREENSHOTS_DRIVER: '../screenshots/minio.driver'
+      GITLAB_JOB_RETRIES: 'false'
+      MINIO_ACCESS_KEY: '<minio-user>'
+      MINIO_SECRET_KEY: '<minio-pass>'
+      MINIO_ENDPOINT: '<minio-ip-address>'
+      MINIO_URL: 'http://<minio-ip-address>'
+      MINIO_PORT: '9000'
+      MINIO_USESSL: 'false'
+      MINIO_BUCKET: sorry-cypress
+      PROBE_LOGGER: "false"
     ports:
       - 1234:1234
-    depends_on:
-      - mongo
-      
-  dashboard:
-    image: agoldis/sorry-cypress-dashboard:latest
-    environment:
-      GRAPHQL_SCHEMA_URL: 'http://cypress-inventi-api.herokuapp.com'
-      CI_URL: ''
-      PORT: 8081
-    ports:
-      - 8081:8081
-    depends_on:
-      - mongo
-      - cypress
+      - 9000:9000
+      - 9090:9090
