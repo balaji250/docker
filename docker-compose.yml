@@ -38,15 +38,7 @@ cypress:
     volumes:
       - "./services/cypress/tests:/app/tests:ro"
 
-  api:
-    image: agoldis/sorry-cypress-api:latest
-    environment:
-      MONGODB_URI: ${MONGO_URI}
-      MONGODB_DATABASE: 'sorry-cypress'
-    ports:
-      - 4000:4000
-    depends_on:
-      - mongo
+ 
      
     
     
@@ -60,5 +52,4 @@ cypress:
       - 8081:8081
     depends_on:
       - mongo
-      - api
       - cypress
