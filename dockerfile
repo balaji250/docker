@@ -2,21 +2,19 @@
 
 
 
-FROM cypress/browsers:node14.17.0-chrome91-ff89
-#Create the folder where our project will be stored
-USER root
-RUN mkdir /app1
-#We make it our workdirectory
-WORKDIR /app1
+FROM cypress/browsers:chrome65-ff57
 
+# set working directory
+WORKDIR /usr/src/app
 
-#Let's copy the essential files that we MUST use to run our scripts.
-COPY ./package.json .
-COPY ./cypress.config.js .
-COPY ./cypress ./cypress
-#Install the cypress dependencies in the work directory
-RUN npm install
-#Executable commands the container will use[Exec Form]
-ENTRYPOINT ["npx","cypress","run"]
-#With CMD in this case, we can specify more parameters to the last entrypoint.
-CMD [""]    
+ENV PATH /usr/src/app/node_modules/.bin:$PATH
+
+# install cypress
+RUN npm install cypress
+
+# copy cypress files and folders
+COPY cypress /usr/src/app/cypress
+COPY cypress.json /usr/src/app/cypress.json
+
+# confirm the cypress install
+RUN ./node_modules/.bin/cypress verify
