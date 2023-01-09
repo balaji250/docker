@@ -12,10 +12,10 @@ services:
       MONGODB_DATABASE: 'cypress-db'
       EXECUTION_DRIVER: '../execution/mongo/driver'
       SCREENSHOTS_DRIVER: '../screenshots/s3.driver'
-      AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}
-      AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
-      S3_REGION: "us-east-2"
-      S3_BUCKET: 'cy-sorry-dashboard'
+     # AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}
+     # AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
+     # S3_REGION: "us-east-2"
+     # S3_BUCKET: 'cy-sorry-dashboard'
     ports:
       - 1234:1234
     depends_on:
