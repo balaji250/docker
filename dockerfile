@@ -19,7 +19,7 @@ ENV CI=true
 
 # install dependencies
 COPY package.json ./
-RUN yarn install --frozen-lockfile
+RUN npm install
 # confirm that Cypress was installed correctly
 RUN npx cypress verify
 
