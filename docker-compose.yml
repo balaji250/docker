@@ -36,9 +36,9 @@ services:
     environment:
       GRAPHQL_SCHEMA_URL: 'http://cypress-inventi-api.herokuapp.com'
       CI_URL: ''
-      PORT: 8080
+      PORT: 8081
     ports:
-      - 8080:8081
+      - 8081:8081
     depends_on:
       - mongo
       - api
