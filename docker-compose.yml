@@ -1,43 +1,7 @@
 version: '3.6'
 
 services:
-  mongo:
-    image: mongo:4.0
-
-  director:
-    image: agoldis/sorry-cypress-director:latest
-    environment:
-      DASHBOARD_URL: 'http://cypress-inventi-dashboard.herokuapp.com'
-      MONGODB_URI: ${MONGO_URI}
-      MONGODB_DATABASE: 'cypress-db'
-      EXECUTION_DRIVER: '../execution/mongo/driver'
-      SCREENSHOTS_DRIVER: '../screenshots/s3.driver'
-     # AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}
-     # AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
-     # S3_REGION: "us-east-2"
-     # S3_BUCKET: 'cy-sorry-dashboard'
-    ports:
-      - 1234:1234
-    depends_on:
-      - mongo
-
-cypress:
-    image: cypress:latest
-    profiles:
-      - cypress
-    depends_on:
-      - dashboard
-    environment:
-    # pass base url to test pointing at the web application
-      - CYPRESS_baseUrl=http://traefik:80
-    command:  "npx cypress run --record --key '${CYPRESS_RECORD_KEY}' --parallel --ci-build-id ${JOB_ID}-${SPLIT_NUM}"
-    ipc: host
-    build: ./services/cypress
-    ports:
-      - "9000:80"
-    volumes:
-      - "./services/cypress/tests:/app/tests:ro"
-    
+ 
   dashboard:
     image: agoldis/sorry-cypress-dashboard:latest
     environment:
