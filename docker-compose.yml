@@ -21,9 +21,22 @@ services:
     depends_on:
       - mongo
 
-configs:
-  image: cypress/browsers:latest
-  stage: test
+cypress:
+    image: cypress:latest
+    profiles:
+      - cypress
+    depends_on:
+      - mongo
+    environment:
+    # pass base url to test pointing at the web application
+      - CYPRESS_baseUrl=http://traefik:80
+    command:  "npx cypress run --record --key '${CYPRESS_RECORD_KEY}' --parallel --ci-build-id ${JOB_ID}-${SPLIT_NUM}"
+    ipc: host
+    build: ./services/cypress
+    ports:
+      - "9000:80"
+    volumes:
+      - "./services/cypress/tests:/app/tests:ro"
 
   api:
     image: agoldis/sorry-cypress-api:latest
@@ -48,4 +61,4 @@ configs:
     depends_on:
       - mongo
       - api
-      - test
+      - cypress
