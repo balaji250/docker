@@ -30,7 +30,14 @@ services:
       - 4000:4000
     depends_on:
       - mongo
-
+      
+     cypress:
+    build:
+      dockerfile: Dockerfile-
+    depends_on:
+      - mongo
+    
+    
   dashboard:
     image: agoldis/sorry-cypress-dashboard:latest
     environment:
@@ -42,3 +49,4 @@ services:
     depends_on:
       - mongo
       - api
+      - cypress
