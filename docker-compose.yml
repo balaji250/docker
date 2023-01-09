@@ -31,7 +31,9 @@ test:
     - npm run start:ci &
     # run Cypress tests
     - npx cypress run 
-     depends_on:
+    ports:
+      - 3000:3000
+    depends_on:
       - mongo
 
   api:
