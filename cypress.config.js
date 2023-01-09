@@ -39,9 +39,7 @@ module.exports = defineConfig({
   //   datatabledata: 'us-test-data/datatable-data.json',
   //   dashboarddata: 'us-test-data/dashboard-data.json',
   //   projectdata: 'us-test-data/project-data.json'
-        EXECUTION_DRIVER="../execution/in-memory"
-        SCREENSHOTS_DRIVER="../screenshots/dummy.driver"
-        PORT=1234
+       
   // },
   e2e: {
     watchForFileChanges: false,
@@ -49,10 +47,7 @@ module.exports = defineConfig({
     commandDelay: 900,
 
   },
- {
-  "baseUrl": "http://13.234.31.186:4000",
-  "projectId": "sorry-cypress",
-}
+ 
   
   
 
