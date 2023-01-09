@@ -22,15 +22,8 @@ services:
       - mongo
 
 test:
-  image: cypress/browsers:node12.14.1-chrome85-ff81
+  image: cypress/browsers:latest
   stage: test
-  script:
-    # install dependencies
-    - npm ci
-    # start the server in the background
-    - npm run start:ci &
-    # run Cypress tests
-    - npx cypress run 
     ports:
       - 3000:3000
     depends_on:
