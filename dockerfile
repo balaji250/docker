@@ -2,7 +2,7 @@
 
 
 
-FROM agoldis/sorry-cypress-director:latest
+FROM cypress/browsers:node14.17.0-chrome91-ff89
 #Create the folder where our project will be stored
 USER root
 RUN mkdir /app1
