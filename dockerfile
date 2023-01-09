@@ -11,8 +11,7 @@ WORKDIR /app
 
 # copy cypress files and folders
 COPY cypress cypress
-COPY cypress.json cypress.json
-
+COPY cypress.config.js cypress.config.js
 # confirm the cypress install
 RUN ./node_modules/.bin/cypress verify
 COPY docker-compose.yml docker-compose.yml
