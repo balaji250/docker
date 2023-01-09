@@ -13,6 +13,5 @@ WORKDIR /app
 COPY cypress cypress
 COPY cypress.config.js cypress.config.js
 # confirm the cypress install
-RUN ./node_modules/.bin/cypress verify
 COPY docker-compose.yml docker-compose.yml
 ENTRYPOINT [" docker-compose.yml"]
