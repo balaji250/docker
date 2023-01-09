@@ -7,8 +7,6 @@ FROM cypress/browsers:chrome65-ff57
 # set working directory
 WORKDIR /usr/src/app
 
-ENV PATH /usr/src/app/node_modules/.bin:$PATH
-
 # install cypres
 
 # copy cypress files and folders
