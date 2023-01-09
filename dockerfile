@@ -2,32 +2,21 @@
 
 
 
-FROM cypress/browsers:node14.7.0-chrome84
+FROM cypress/browsers:chrome65-ff57
 
-RUN useradd -ms /bin/bash cypress
-RUN install -d -m 0777 -o cypress -g cypress /app
-RUN chown cypress:cypress /app
-WORKDIR /app
-RUN useradd -ms /bin/bash admin
-RUN chown -R root:root /app
-RUN chmod 755 /app
-USER root
-ENV CYPRESS_CACHE_FOLDER="/app/.cypress"
-ENV CI=true
+# set working directory
+WORKDIR /usr/src/app
 
-# USER cypress
+ENV PATH /usr/src/app/node_modules/.bin:$PATH
 
-# install dependencies
-COPY package.json ./
-RUN npm install
-# confirm that Cypress was installed correctly
-RUN npx cypress verify
+# install cypress
+RUN npm install cypress
 
-# copy files required by yarn tasks
-COPY cypress.json ./
-# copy reporter config, used to output JUnit XML
-COPY cypress.config.js ./
-# copy tests
-COPY cypress cypress
-EXPOSE 3000
-ENTRYPOINT ["npx" , "cypress" , "run"]
+# copy cypress files and folders
+COPY cypress /usr/src/app/cypress
+COPY cypress.json /usr/src/app/cypress.json
+
+# confirm the cypress install
+RUN ./node_modules/.bin/cypress verify
+COPY docker-compose.yml docker-compose.yml
+ENTRYPOINT [" docker-compose.yml"]
