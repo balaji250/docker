@@ -26,11 +26,6 @@
     
   }
 
-
-  "baseUrl": { "http://localhost:3000",
-  "projectId": "sorry-cypress",
-  ...otherOptions
-}
   
   }
   
