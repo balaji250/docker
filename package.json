@@ -25,6 +25,13 @@
     "mochawesome-merge": "^4.2.2"
     
   }
+  // cypress.json:
+
+{
+  "baseUrl": "http://localhost:3000",
+  "projectId": "sorry-cypress",
+  ...otherOptions
+}
   
   }
   
