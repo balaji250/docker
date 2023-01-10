@@ -25,10 +25,7 @@
     "mochawesome-merge": "^4.2.2"
     
   },
-  "npm install cy2 cypress": {
-"export CYPRESS_API_URL"="http://localhost:1234/"
-"npx cy2 run --record --key XXX --parallel --ci-build-id `date +%s`"
-}
+  
   }
   
   
