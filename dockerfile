@@ -13,6 +13,7 @@ COPY ./package.json .
 COPY ./cypress.config.js .
 COPY ./cypress ./cypress
 #Install the cypress dependencies in the work directory
+RUN export CYPRESS_API_URL="http://localhost:1234/"
 RUN npm install
 RUN npm install cy2 cypress
 #Executable commands the container will use[Exec Form]
