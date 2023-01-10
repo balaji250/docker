@@ -45,6 +45,7 @@ module.exports = defineConfig({
     watchForFileChanges: false,
     defaultCommandTimeout: 10000,
     commandDelay: 900,
+    projectid: local-01,
 
   },
  
