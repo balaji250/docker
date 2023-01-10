@@ -4,9 +4,9 @@
 
 FROM agoldis/sorry-cypress-director
 #Create the folder where our project will be stored
-RUN mkdir /app
+RUN mkdir /app1
 #We make it our workdirectory
-WORKDIR /app
+WORKDIR /app1
 #Let's copy the essential files that we MUST use to run our scripts.
 COPY ./package.json .
 COPY ./cypress.config.js .
