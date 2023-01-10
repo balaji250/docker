@@ -14,4 +14,4 @@ COPY ./cypress ./cypress
 #Install the cypress dependencies in the work directory
 RUN npm install
 #Executable commands the container will use[Exec Form]
-cypress run --parallel --record --key xxx --ci-build-id local-01
+RUN npx cypress run --parallel --record --key xxx --ci-build-id local-01
