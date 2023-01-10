@@ -46,7 +46,7 @@ module.exports = defineConfig({
     defaultCommandTimeout: 10000,
     commandDelay: 900,
     projectid: local-01,
-    baseUrl: "http://localhost:1234,
+    api_url: "http://localhost:1234/",
 
   },
  
