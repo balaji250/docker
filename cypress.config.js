@@ -45,9 +45,7 @@ module.exports = defineConfig({
     watchForFileChanges: false,
     defaultCommandTimeout: 10000,
     commandDelay: 900,
-    projectid: local-01,
-    api_url: http://128.199.18.193:1234
-
+    
   },
  
 
