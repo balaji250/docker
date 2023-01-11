@@ -45,7 +45,7 @@ module.exports = defineConfig({
     watchForFileChanges: false,
     defaultCommandTimeout: 10000,
     commandDelay: 900,
-    "projectId": "date +%s"
+    "projectId": "build"
     
   },
  
