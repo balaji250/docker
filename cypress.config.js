@@ -7,7 +7,7 @@ const {
 
 module.exports = defineConfig({
   env: {
-    url: 'http://localhost:8081',
+    url: 'https://india-yoroflow.com',
     
     dashboarddata: 'india-data/dashboard-data.json',
     taskboarddata: 'india-data/taskboard-data.json',
